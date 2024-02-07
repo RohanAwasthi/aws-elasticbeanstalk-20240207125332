@@ -1,0 +1,33 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "copilot-demo-0702-1"
+
+  links:
+    - url: https://github.com/RohanAwasthi/aws-elasticbeanstalk-20240207125332
+      title: "copilot-demo-0702-1"
+      icon: code
+
+  labels:
+    system: web-apps
+    trackid: "aws-elasticbeanstalk-20240207125332"
+    environmentname: prod-stage
+
+  tags:
+    - node
+    - aws
+    - "applicationtype-webapplication"
+
+  annotations:
+    # add elastic beanstalk annotation
+    jenkins.io/github-folder: 'custom-actions/tf-copilot-demo-0702-1'
+    github.com/project-slug: RohanAwasthi/aws-elasticbeanstalk-20240207125332
+    backstage.io/techdocs-ref: dir:. 
+    backstage.io/linguist: https://github.com/ItRachii/ebs-sample-node-application
+    sonarqube.org/project-key: 'node-app/aws-elb-node'
+
+spec:
+  type: service
+  lifecycle: experimental
+  system: elasticbeanstalk
+  owner: "group:default/ey"
